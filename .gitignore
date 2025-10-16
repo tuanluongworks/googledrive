@@ -1,33 +1,102 @@
-# Environment variables
-.env
-
-# Google credentials
-credentials.json
-token.json
-
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
-venv/
-env/
-ENV/
-*.egg-info/
-dist/
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Sync state
-.sync_state.db
-.sync_state.json
+# Virtual environments
+.env
+.env.*
+.venv
+venv/
+ENV/
+env/
+.python-version
 
-# IDE
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.hypothesis/
+*.cover
+*.py,cover
+coverage.xml
+.mypy_cache/
+.pytype/
+.pyre/
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Logs
+logs/
+*.log
+
+# Google API credentials (keep OAuth tokens out of Git)
+token.json
+credentials.json
+
+# Local config overrides and secrets
+config.local.py
+*.local.yaml
+*.local.yml
+*.local.json
+*.env.local
+*.secrets.*
+*.secret.*
+
+# IDE/editor
 .vscode/
 .idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temp files
+*~
 *.swp
 *.swo
 
-# OS
-.DS_Store
-Thumbs.db
+# Python project caches
+__pypackages__/
+
+*.md

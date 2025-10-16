@@ -142,6 +142,37 @@ Or use the executable:
 
 Press `Ctrl+C` to gracefully stop the sync engine.
 
+## VS Code Debugging
+
+Line-by-line debugging is preconfigured for VS Code.
+
+- Prerequisites
+  - Install the Python extension for VS Code (ms-python.python)
+  - Python 3.8+ installed and selected as interpreter
+  - Create `.env` from `.env.example` and fill required values
+  - Install dependencies: `python3 -m pip install -r requirements.txt`
+
+- Launch
+  - Open this folder in VS Code
+  - Open the Run and Debug view and select `Python: Run main.py`
+  - Set breakpoints in `main.py`, `drive_client.py`, `sync_engine.py`, etc.
+  - Press F5 to start; the app runs in the integrated terminal with `.env` loaded
+
+- Optional: Attach by port (remote/advanced)
+  - Install `debugpy` and add near the beginning of your entry point:
+
+    ```python
+    import debugpy
+    debugpy.listen(("localhost", 5678))
+    # debugpy.wait_for_client()  # optionally block until the debugger attaches
+    ```
+
+  - Run the program normally, then use the `Python: Attach by Port (5678)` configuration
+
+Tips:
+- OAuth opens a browser for authentication; keep the debugger running
+- For more verbose logs while debugging, temporarily change `level=logging.INFO` to `DEBUG` in `main.py`
+
 ## Configuration
 
 Edit `config.py` or `.env` to customize:
